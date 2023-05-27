@@ -1,8 +1,10 @@
 const express = require('express')
+const { getAllToDoItems } = require('../controllers/todo_items')
 const router  = express.Router()
 
-router.get('/',(request,response)=>{
-    response.send("list of all to do items")
-})
+router.route('/').get(getAllToDoItems)
 
 module.exports = router
+
+// views
+// controllers
