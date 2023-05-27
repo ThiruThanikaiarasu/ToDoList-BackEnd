@@ -4,7 +4,7 @@ const PORT = 3500
 const todo_items = require('./routes/todo_items')
 
 app.use(express.urlencoded({extended:true}))
-app.use(express.json())    // only apply for json inputs
+app.use(express.json())    // only apply for json inputs from the postman
 
 app.get('/',(request,response)=>{
     response.status(200).send('working')
